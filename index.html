@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Srisakdi&display=swap');
+        body{
+            font-family: 'Srisakdi', cursive;
+            font-size:x-large
+        }
+        </style>
+    
+    <title>ดูดวง เลข เจ็ด ตัว สาม ฐาน</title>
+</head>
+<body>
+    <center>
+    <h1>ดูดวง เลข เจ็ด ตัว สาม ฐาน</h1>
+         
+ 
+    
+   วันเกิด: <select id="day" style="font-size:24px;">
+        <option value="วัน อาทิตย์">วัน อาทิตย์</option>
+        <option value="วัน จันทร์">วัน จันทร์</option>
+        <option value="วัน อังคาร">วัน อังคาร</option>
+        <option value="วัน พุฒ">วัน พุฒ</option>
+        <option value="วัน พฤหัศบดิ์">วัน พฤหัศบดิ์</option>
+        <option value="วัน สุกร์">วัน สุกร์</option>
+        <option value="วัน เสาร์">วัน เสาร์</option>
+      </select> 
+     เดือน: <select id="month" style="font-size:24px;">
+        <option value="1">๑</option>
+        <option value="2">๒</option>
+        <option value="3">๓</option>
+        <option value="4">๔</option>
+        <option value="5">๕</option>
+        <option value="6">๖</option>
+        <option value="7">๗</option>
+        <option value="8">๘</option>
+        <option value="9">๙</option>
+        <option value="10">๑๐</option>
+        <option value="11">๑๑</option>
+        <option value="12">๑๒</option>
+      </select>
+      ปี: <select id="year" style="font-size:24px;">
+        <option value="ชวด">ชวด</option>
+        <option value="มะแม">มะแม</option>
+        <option value="ฉลู">ฉลู</option>
+        <option value="วอก">วอก</option>
+        <option value="ขาน">ขาน</option>
+        <option value="ระกา">ระกา</option>
+        <option value="เถาะ">เถาะ</option>
+        <option value="จอ">จอ</option>
+        <option value="มะโรง">มะโรง</option>
+        <option value="กุน">กุน</option>
+        <option value="มะเสง">มะเสง</option>
+        <option value="มะเมีย">มะเมีย</option>
+      </select> 
+      => <button class="cal" onsubmit="cal()" style="font-size:18px">ทำนาย</button>
+      <br><br>
+      <table style="width: 26%;" border="1">
+        <tbody>
+        <tr>
+        <td><center><div id="d1"></center></div></td>
+        <td><center><div id="d2"></div></center></td>
+        <td><center><div id="d3"></div></center></td>
+        <td><center><div id="d4"></div></center></td>
+        <td><center><div id="d5"></div></center></td>
+        <td><center><div id="d6"></div></center></td>
+        <td><center><div id="d7"></div></center></td>
+        </tr>
+        <tr>
+            <td><center><div id="m1"></center></div></td>
+            <td><center><div id="m2"></div></center></td>
+            <td><center><div id="m3"></div></center></td>
+            <td><center><div id="m4"></div></center></td>
+            <td><center><div id="m5"></div></center></td>
+            <td><center><div id="m6"></div></center></td>
+            <td><center><div id="m7"></div></center></td>
+        </tr>
+        <tr>
+            <td><center><div id="y1"></center></div></td>
+            <td><center><div id="y2"></div></center></td>
+            <td><center><div id="y3"></div></center></td>
+            <td><center><div id="y4"></div></center></td>
+            <td><center><div id="y5"></div></center></td>
+            <td><center><div id="y6"></div></center></td>
+            <td><center><div id="y7"></div></center></td>
+        </tr>
+        </tbody>
+        </table>
+      <hr>
+    <p></p>
+    <div id="dtext"></div><br>
+    <div id="mtext"></div><br>
+    <div id="ytext"></div>
+    </center>
+    <script>
+function cal() {
+
+day = document.getElementById("day").value
+month = document.getElementById("month").value
+year = document.getElementById("year").value
+
+if (day == "วัน อาทิตย์"){
+    document.getElementById('d1').innerHTML= "๑<br>อัตตะ"
+    document.getElementById('d2').innerHTML= "๒<br>หินะ"
+    document.getElementById('d3').innerHTML= "๓<br>ธะนัง"
+    document.getElementById('d4').innerHTML= "๔<br>ปีตา"
+    document.getElementById('d5').innerHTML= "๕<br>มาตา"
+    document.getElementById('d6').innerHTML= "๖<br>โภคา"
+    document.getElementById('d7').innerHTML= "๗<br>มัชฌิมา"
+    document.getElementById('dtext').innerHTML= "• สิทธิการิย ท่าน กล่าว ไว้ ว่า หญิง ชาย ผู้ ใด เกิด วัน อาทิตย์ ๑ เปน อัตตะ ทาย ว่า ผู้ นั้น เมื่อ น้อย ได้ อา ไศรย ญาติ ข้าง บิดา อุปถัมภ์ เลี้ยง ดู มาก กว่า ญาติ ข้าง มารดา ผู้ นั้น เปน คน เจรจา ไพเราะ ฝีปาก ดี จะ มี บุญ เพราะ ตัว เอง ๒ เปน หินะ ทาย ว่า ผู้ นั้น ใจ ลักเลง มิ สู้ จะ รัก ทรัพย์ ๓ เปน ธะนัง ทาย ว่า ผู้ นั้น มี เข้า ของ อัน ใด มัก ชอบ ซื้อ จ่าย เสีย ๔ เปน ปีตา ๕ เปน มาตา ทาย ว่า แม่ ตาย ก่อน พ่อ ๖ เปน โภคา ทาย ว่า ผู้ นั้น มี เข้า ของ มัก พอ ใจ แบ่ง ปัน ให้ พี่ น้อง ตัว ๗ เปน มัชฌิมา ทาย ว่า ผู้ นั้น เจรจา อาจ หาญ ใจ กล้า แขง แล"
+} else if (day == "วัน จันทร์"){
+    document.getElementById('d1').innerHTML= "๒<br>อัตตะ"
+    document.getElementById('d2').innerHTML= "๓<br>หินะ"
+    document.getElementById('d3').innerHTML= "๔<br>ธะนัง"
+    document.getElementById('d4').innerHTML= "๕<br>ปีตา"
+    document.getElementById('d5').innerHTML= "๖<br>มาตา"
+    document.getElementById('d6').innerHTML= "๗<br>โภคา"
+    document.getElementById('d7').innerHTML= "๑<br>มัชฌิมา"
+    document.getElementById('dtext').innerHTML= "• สิทธิการิย หญิง ชาย ผู้ ใด เกิด วัน จันทร์ ๒ เปน อัตตะ ทาย ว่า ผู้ นั้น เมื่อ น้อย จะ ต้อง ไกล จาก ญาติ ของ ตน มี สมณะ ชีพรามณ์ ท่าน ผู้ ใหญ่ อุปถัมภ์ เลี้ยง ดู ไว้ ภาย หลัง จะ มี ผู้ ใหญ่ อยู่ ทิศ เหนือ อุปถัมภ์ รัก เหมือน บุตร ท่าน จะ สงเคราะห์ ให้ ลาภ แก่ ตน แต่ ว่า อาภัพ ทำ คุณ ใคร ไม่ ขึ้น เจรจา สิ่ง ใด เปน ที่ ชอบ ใจ แก่ ท่าน ผู้ ใหญ่ แล ๓ เปน หินะ ทาย ว่า ถึง จะมี ทรัพย์ ก็ เหมือน ไม่ มี เพราะ ผู้ นั้น ใจ มิสู้ จะ รัก แล ๔ เปน ธะนัง ทาย ว่า ผู้ นั้น มี ทรัพย์ เก็บ เอง มิดี ต้อง ให้ ผู้ อื่น ที่ ไว้ ใจ ได้ เก็บ จึง จะ บริบูรณ แล ๕ เปน ปีตา ๖ เปน มาตา ทาย ว่า พ่อ ตาย ก่อน แม่ แล ๗ เปน โภคา ทาย ว่า ผู้ นั้น ใจ ไม่ รัก ทรัพย์ แล ๑ เปน มัชฌิมา ทาย ว่า ผู้ นั้น จะ คบ หา ใคร ที แรก เขา ก็ ว่า ดี นาน ไป มัก จะ บาด หมาง กัน ถึง จะ ทำ คุณ แก่ ใคร เขา ก็ ไม่ ว่า ดี แล"
+} else if (day == "วัน อังคาร"){
+    document.getElementById('d1').innerHTML= "๓<br>อัตตะ"
+    document.getElementById('d2').innerHTML= "๔<br>หินะ"
+    document.getElementById('d3').innerHTML= "๕<br>ธะนัง"
+    document.getElementById('d4').innerHTML= "๖<br>ปีตา"
+    document.getElementById('d5').innerHTML= "๗<br>มาตา"
+    document.getElementById('d6').innerHTML= "๑<br>โภคา"
+    document.getElementById('d7').innerHTML= "๒<br>มัชฌิมา"
+    document.getElementById('dtext').innerHTML= "• สิทธิการิย หญิง ชาย ผู้ ใด เกิด วัน อังคาร ๓ เปน อัตตะ ทาย ว่า ผู้ นั้น ศีศะ มัก แตก แต่ ว่า ความ คิด ดี มัก จะ ถูก เจ็บ เพราะ เพื่อน ที่ จะ หมาย พึ่ง เขา นั้น ไม่ ได้ มี แต่ เขา จะ หมาย พึ่ง ตน แล ๔ เปน หินะ ทาย ว่า ผู้ นั้น จะ มี ทรัพย์ สิน เข้า ของ ทั้ง ปวง แล ๕ เปน ธะนัง ทาย ว่า ผู้ นั้น จะ ได้ ของ ท่าน ผู้ อื่น แต่ ว่ารักษา ไม่ คง แล ๖ เปน ปีตา ๗ เปน มาตา ทาย ว่า ผู้ นั้น พ่อ ตาย ก่อน แม่ แล ๑ เปน โภคา ทาย ว่า ผู้ นั้น เจ้า ทรัพย์ แล ๒ เปน มัชฌิมา ทาย ว่า ผู้ นั้น เจรจา ดี จะ ไป หา ท่าน ผู้ ใด ก็ เปน ที่ เกรง ใจ แห่ง ชน ทั้งหลาย แล"
+} else if (day == "วัน พุฒ"){
+    document.getElementById('d1').innerHTML= "๔<br>อัตตะ"
+    document.getElementById('d2').innerHTML= "๕<br>หินะ"
+    document.getElementById('d3').innerHTML= "๖<br>ธะนัง"
+    document.getElementById('d4').innerHTML= "๗<br>ปีตา"
+    document.getElementById('d5').innerHTML= "๑<br>มาตา"
+    document.getElementById('d6').innerHTML= "๒<br>โภคา"
+    document.getElementById('d7').innerHTML= "๓<br>มัชฌิมา"
+    document.getElementById('dtext').innerHTML= "• สิทธิการิย หญิง ชาย ผู้ ใด เกิด วัน พุฒ ๔ เปน อัตตะ ทาย ว่า ผู้ นั้น หน้า ผาก ใหฐ่ ผม บาง ทำ คุณ แก่ ใคร ไม่ ขึ้น ต่อ หน้า เขา ก็ ชม ว่า ดี ลับ หลัง เขา ก็ ติ ว่า ร้าย ทาย ว่า พี่ น้อง มาก อีก อาจาริย์ หนึ่ง ท่าน ว่า ไร้ แม่ แล ๕ เปน หินะ ทาย ว่า ผู้ นั้น ที ทรัพย์ มาก แล ๖ เปน ธะนัง ทาย ว่า ผู้ นั้น เปน คน ช่าง เก็บ ช่าง งำ มี เข้า ของ มิ ให้ สูญ หาย แล ๗ เปน ปีตา ๑ เปน มาตา ทาย ว่า ผู้ นั้น แม่ ตาย ก่อน พ่อ แล ๒ เปน โภคา ทาย ว่า ผู้ นั้น รัก ทรัพย์ แต่ ใจง่าย แล ๓ เปน มัชฌิมา ทาย ว่า ผู้ นั้น จะ ไป ใน ทิศานุทิศ มี ผู้ รัก ใคร่ อยาก จะ คบ หา เปน มิตร สหาย แล"
+} else if (day == "วัน พฤหัศบดิ์"){
+    document.getElementById('d1').innerHTML= "๕<br>อัตตะ"
+    document.getElementById('d2').innerHTML= "๖<br>หินะ"
+    document.getElementById('d3').innerHTML= "๗<br>ธะนัง"
+    document.getElementById('d4').innerHTML= "๑<br>ปีตา"
+    document.getElementById('d5').innerHTML= "๒<br>มาตา"
+    document.getElementById('d6').innerHTML= "๓<br>โภคา"
+    document.getElementById('d7').innerHTML= "๔<br>มัชฌิมา"
+    document.getElementById('dtext').innerHTML= "• สิทธิการิย หญิง ชาย ผู้ ใด เกิด วัน พฤหัศบดิ์ ๕ เปน อัตตะ ทาย ว่า ผู้ นั้น เจรจา ดี มี ปัญญา มาก รู้ หลัก นัก ปราช เปน คน มิ ใคร่ จะ พูด มาก จะ มี บุตร หลาย คน แม้น ทำ ราชการ ดี ชอบ ใจ คน แล ๖ เปน หินะ ทาย ว่า ผู้ นั้น เก็บ เข้า ของ ทั้ง ปวง ดี แล ๗ เปน ธะนัง ทาย ว่า ผู้ นั้น เก็บ ทรัพย์ เอง ไม่ดี ให้ ผู้ อื่น ที่ ไว้ใจ ได้ เก็บ จึง จะ ดี แล ๑ เปน ปีตา ๒ มาตา ทาย ว่า พ่อ ตาย ก่อน แม่ แล ๓ เปน โภคา ทาย ว่า ผู้ นั้น ชอบ ทาง ลักเลง แล ๔ เปน มัชฌิมา ทาย ว่า ผู้ นั้น เจรจา น้อย มัก เปน ที่ ชอบ ใจ แห่ง คน ทั้ง ปวง แล"
+} else if (day == "วัน สุกร์"){
+    document.getElementById('d1').innerHTML= "๖<br>อัตตะ"
+    document.getElementById('d2').innerHTML= "๗<br>หินะ"
+    document.getElementById('d3').innerHTML= "๑<br>ธะนัง"
+    document.getElementById('d4').innerHTML= "๒<br>ปีตา"
+    document.getElementById('d5').innerHTML= "๓<br>มาตา"
+    document.getElementById('d6').innerHTML= "๔<br>โภคา"
+    document.getElementById('d7').innerHTML= "๕<br>มัชฌิมา"
+    document.getElementById('dtext').innerHTML= "• สิทธิการิย หญิง ชาย ผู้ ใด เกิด วัน สุกร์ ๖ เปน อัตตะ ทาย ว่า ผู้ นั้น จะ มี เมีย มาก เจรจา เปน ที่ เจ้าชู้ มัก ชอบ ใจ หญิง จะ ได้ ลาภ เพราะ มี เมีย มาก เจรจา เปน ที่ เจ้าชู้ มัก ชอบ ใจ หญิง จะ ได้ ลาภ เพราะ มิตร สหาย ไม่ ค่อย จะ มี ใคร นินทา ว่า กล่าว แล ๗ เปน หินะ ทาย ว่า ผู้ นั้น มี ทรัพย์ เอา ไว้ กับ ตัว มิได้ เปน คน ใจ ใหญ่ ถ้า ใคร มา ออก ปาก มัก จะ ไม่ ขัด เขา แล ๑ เปน ธะนัง ทาย ว่า ผู้ นั้น มี ทรัพย์ เก็บ เอง ไม่ อยู่ ต้อง ให้ ผู้ อื่น เก็บ จึง จะ ดี แล ๒ เปน ปีตา ๓ เปน มาตา ทาย ว่า แม่ ตาย ก่อน พ่อ แล ๔ เปน มัชฌิมา ทาย ว่า ผู้ นั้น มัก ไม่ ไว้ ใจ คน จะ เจรจา กับ ใคร มัก ชอบ ซัก ถาม จู้ จี้ แล"
+} else if (day == "วัน เสาร์"){
+    document.getElementById('d1').innerHTML= "๗<br>อัตตะ"
+    document.getElementById('d2').innerHTML= "๑<br>หินะ"
+    document.getElementById('d3').innerHTML= "๒<br>ธะนัง"
+    document.getElementById('d4').innerHTML= "๓<br>ปีตา"
+    document.getElementById('d5').innerHTML= "๔<br>มาตา"
+    document.getElementById('d6').innerHTML= "๕<br>โภคา"
+    document.getElementById('d7').innerHTML= "๖<br>มัชฌิมา"
+    document.getElementById('dtext').innerHTML= "• สิทธิการิย หญิง ชาย ผู้ ใด เกิด วัน เสาร์ ๗ เปน อัตตะ ทาย ว่า ผู้ นั้น เมื่อ คลอด ออก มา บาง คน รก พัน คอ บาง คน ผม หยอง ในตา โต ถ้า มิฉนั้น ตา ซ้าย มัก พิการ เจรจา เปน ที่ ชอบ ใจ แห่ง ท่าน ผู้ ใหญ่ แต่ ทำ คุณ แก่ ใคร ไม่ ขึ้น ถึง จะ ทำ ดี อย่าง ไร ต่อ หน้า เขา ก็ ว่า ดี ลับ หลัง เขาก็ ไม่ ว่า ดี แล ๑ เปน หินะ ทาย ว่า ผู้ นั้น เปน จะ ต้อง ตก ยาก คราว หนึ่ง แล ๒ เปน ธะนัง ทาย ว่า ผู้ นั้น เปน คน ตระหนิ่ ทรัพย์ สิ่ง ของ ทั้ง ปวง แล ๓ เปน ปีตา ๔ เปน มาตา ทาย ว่า พ่อ ตาย ก่อน แม่ แล ๕ เปน โภคา ทาย ว่า ผู้ นั้น มี ทรัพย์ เพราะ ผู้ อื่น ให้ แล ๖ เปน มัชฌิมา ทาย ว่า ผู้ นั้น เจรจา อ่อน หวาน เปน ที่ ชอบ ใจ แห่ง ผู้ ใหญ่"
+}
+
+
+if (month == 1){
+    document.getElementById('m1').innerHTML= "๑<br>ตะนุ"
+    document.getElementById('m2').innerHTML= "๒<br>กะดุมภะ"
+    document.getElementById('m3').innerHTML= "๓<br>สหัชชะ"
+    document.getElementById('m4').innerHTML= "๔<br>พันธุ"
+    document.getElementById('m5').innerHTML= "๕<br>ปุตตะ"
+    document.getElementById('m6').innerHTML= "๖<br>หริ"
+    document.getElementById('m7').innerHTML= "๗<br>ปัตตนิ"
+    document.getElementById('mtext').innerHTML= "• อาจาริย์ ท่าน กล่าว ไว้ ว่า หญิง ชาย ผู้ ใด เกิด ใน เดือน อ้าย ๑ เปน ตะนุ ทาย ว่า ผู้ นั้น สี เนื้อ ดำ แดง รูป พรรณ เรียว ๒ เปน กะดุมภะ ทาย ว่า ผู้ นั้น เปน คน ปาน กลาง ไม่ ยาก ไม่ จน นัก ๓ เปน สหัชชะ ทาย ว่า ผู้ นั้น ถ้า จะ คบ คน ให้ คบ คน สี เนื้อ กำ แดง ดี แล ๔ เปน พันธุ ๕ เปน ปุตตะ ทาย ว่า ผู้ นั้น ถ้า มี บุตร ชาย ก่อน ดี ถ้า มี บุตร หญิง ก่อน ไม่ ดี แล ๖ เปน หริ ทาย ว่า ผู้ นั้น มี ชาย ตา เหลือง ผม หยอง เปน สัตรู ถ้า เปน ผู้ หญิง นท ยาน ข้าง หนึ่ง แล ๗ เปน ปัตตะนิ ทาย ว่า ผู้ นั้น จะ ได้ คู่ เปน คน ใจ ดุร้าย พูดจา สับปลับ แล"
+} else if (month == 2){
+    document.getElementById('m1').innerHTML= "๒<br>ตะนุ"
+    document.getElementById('m2').innerHTML= "๓<br>กะดุมภะ"
+    document.getElementById('m3').innerHTML= "๔<br>สหัชชะ"
+    document.getElementById('m4').innerHTML= "๕<br>พันธุ"
+    document.getElementById('m5').innerHTML= "๖<br>ปุตตะ"
+    document.getElementById('m6').innerHTML= "๗<br>หริ"
+    document.getElementById('m7').innerHTML= "๑<br>ปัตตนิ"
+    document.getElementById('mtext').innerHTML= "• หญิง ชาย ผู้ ใด เกิด ใน เดือน ยี่ ๒ เปน ตะนุ ทาย ว่า ผู้ นั้น สี เนื้อ ขาว เหลือง จึง จะ ต้อง โฉลก ๓ เปน กะดุมภะ ทาย ว่า ผู้ นั้น เปน คน ปาน กลาง พอ จะ เลี้ยง ตัว ได้ ๔ เปน สหัชชะ ทาย ว่า ผู้ นั้น คบ มิตร ผู้ ชาย ที่ รูป ร่าง เรียว บาง สัก หน่อย จึง จะ ดี ๕ เปน พันธุ ๖ เปน ปุตตะ ทาย ว่า ผู้ นั้น จะ มี บุตร ชาย ก่อน จึง จะ ดี ถูก โฉลก แล ๗ เปน หริ ทาย ว่า ผู้ นั้น จะ มี คน สี เนื้อ ดำ แดง เปน สัตรู ถ้า แม้น หญิง สี เนื้อ ขาว รูป ร่าง สูง แล ๑ เปน ปัตตะนิ ทาย ว่า ผู้ นั้น จะ ได้ คู่ ดี เปน ที่ พึ่ง แล"
+} else if (month == 3){
+    document.getElementById('m1').innerHTML= "๓<br>ตะนุ"
+    document.getElementById('m2').innerHTML= "๔<br>กะดุมภะ"
+    document.getElementById('m3').innerHTML= "๕<br>สหัชชะ"
+    document.getElementById('m4').innerHTML= "๖<br>พันธุ"
+    document.getElementById('m5').innerHTML= "๗<br>ปุตตะ"
+    document.getElementById('m6').innerHTML= "๑<br>หริ"
+    document.getElementById('m7').innerHTML= "๒<br>ปัตตนิ"
+    document.getElementById('mtext').innerHTML= "• หญิง ชาย ผู้ ใด เกิด ใน เดือน สาม ๓ เปน ตะนุ ทาย ว่า ผู้ นั้น สี เนื้อ ดำ แดง จึง จะ ต้อง โฉลก แล ๔ เปน กะดุมภะ ทาย ว่า ผู้ นั้น เปน คน ปาน กลาง ๕ เปน สหัชชะ ทาย ว่า ผู้ นั้น คบ คน สี เนื้อ ขาว จึง จะ ดี ๖ เปน พันธุ ๗ เปน ปุตตะ ทาย ว่า ผู้ นั้น มี บุตร น้ำ ใจ กล้า หาย อาษา เจ้า นาย จึง จะ ดี แล ๑ เปน หริ ทาย ว่า ผู้ นั้น มี คน หอง ร้าย เปน สัตรู มาก จะ ทำ สิ่ง ใด ต้อง ระวัง ตัว แล ๒ เปน ปัตตะนิ ทาย ว่า ผู้ นั้น จะ ได้ คู่ เชื้อ ตระกูล ผู้ ดี แต่ มัก จะ ต่าง ใจ กัน ไม่ เกรง กัน แล"
+} else if (month == 4){
+    document.getElementById('m1').innerHTML= "๔<br>ตะนุ"
+    document.getElementById('m2').innerHTML= "๕<br>กะดุมภะ"
+    document.getElementById('m3').innerHTML= "๖<br>สหัชชะ"
+    document.getElementById('m4').innerHTML= "๗<br>พันธุ"
+    document.getElementById('m5').innerHTML= "๑<br>ปุตตะ"
+    document.getElementById('m6').innerHTML= "๒<br>หริ"
+    document.getElementById('m7').innerHTML= "๓<br>ปัตตนิ"
+    document.getElementById('mtext').innerHTML= "• หญิง ชาย ผู้ ใด เกิด ใน เดือน สี่ ๔ เปน ตะนุ ทาย ว่า ผู้ นั้น เปน คน เนื้อ สอง สี ๕ เปน กะดุมภะ ทาย ว่า ผู้ นั้น เปน คน ดี เลี้ยง ตัว ได้ จะ มี บุญ วาศนา เพราะ ตน เอง ๖ เปน สหัชชะ ทาย ว่า ผู้ นั้น คบ คน สี เนื้อ กำ แดง จึง จะ ดี ๗ เปน พันธุ ๑ เปน ปุตตะ ทาย ว่า ผู้ นั้น มี บุตร ชาย หัว ปี จึง จะ ดี ถ้า มี บุตร หญิง หัว ปี ไม่ สู้ ดี ๒ เปน หริ ทาย ว่า ผู้ นั้น มี สัตรู เปน ผู้ หญิง คอย ปอง ร้าย ๓ เปน ปัตตะนิ ทาย ว่า ผู้ นั้น จะ ได้ คู่ เปนคน ปาก ร้าย สักหน่อย แต่ ว่า ความ คิด ความ อ่าน ดี นักแล"
+} else if (month == 5){
+    document.getElementById('m1').innerHTML= "๕<br>ตะนุ"
+    document.getElementById('m2').innerHTML= "๖<br>กะดุมภะ"
+    document.getElementById('m3').innerHTML= "๗<br>สหัชชะ"
+    document.getElementById('m4').innerHTML= "๑<br>พันธุ"
+    document.getElementById('m5').innerHTML= "๒<br>ปุตตะ"
+    document.getElementById('m6').innerHTML= "๓<br>หริ"
+    document.getElementById('m7').innerHTML= "๔<br>ปัตตนิ"
+    document.getElementById('mtext').innerHTML= "• หญิง ชาย ผู้ ใด เกิด ใน เดือน ห้า ๕ เปน ตะนุ ทาย ว่า ผู้ นั้น สี เนื้อ ดำ แดง สัก หน่อย จึง จะ ต้อง โฉลก ๖ เปน กะดุมภะ ทาย ว่า ผู้ นั้น เปน คน ดี จะ ได้ เปน ใหญ่ เพราะ มี ผู้ อุปถัมภ์ ๗ เปน สหัชชะ ทาย ว่า ผู้ นั้น คบ คน สี เนื้อ ดำ แดง รูปร่าง เกร็งจึง จะ ดี ๑ เปน พันธุ ๒ เปน ปุตตะ ทาย ว่า ผู้ นั้น มี ลูก หญิง หัว ปี จึง จะ ดี ถ้า มี ลูก ชาย ก่อน มิ สู้ จะ ดี ๓ เปน หริ ทาย ว่า ผู้ นั้น มี สัตรู เปน คน ผม หยอง ตา เหลือง ๔ เปน ปัตตะนิ ทาย ว่า ผู้ นั้น จะ ได้ คู่ เปน คน ปาก กล้า สักหน่อย แล"
+} else if (month == 6){
+    document.getElementById('m1').innerHTML= "๖<br>ตะนุ"
+    document.getElementById('m2').innerHTML= "๗<br>กะดุมภะ"
+    document.getElementById('m3').innerHTML= "๑<br>สหัชชะ"
+    document.getElementById('m4').innerHTML= "๒<br>พันธุ"
+    document.getElementById('m5').innerHTML= "๓<br>ปุตตะ"
+    document.getElementById('m6').innerHTML= "๔<br>หริ"
+    document.getElementById('m7').innerHTML= "๕<br>ปัตตนิ"
+    document.getElementById('mtext').innerHTML= "• หญิง ชาย ผู้ ใด เกิด ใน เดือน หก ๖ เปน ตะนุ ทาย ว่า ผู้ นั้น สี เนื้อ ขาว รูปร่าง สูง เจรจา ไม่ สู้ เพราะ ๗ เปน กะดุมภะ ทาย ว่า ผู้ นั้น เปน คน อาภัพ ๑ เปน สหัชชะ ทาย ว่า ผู้ นั้น เปน คน อาภัพ มัก ชอบ บ่น จู้ จี้ ๒ เปน พันธุ ๓ เปน ปุตตะ ทาย ว่า มี ลูก ชาย หัว ปี จึง จะ ดี ถ้า มี ลูก หญิง ก่อน มิ ดี แล ๔ เปน หริ ทาย ว่า ผู้ นั้น มี คน สี เนื้อ กำ แดง มัก เปน แผล เปน สัตรู คอย คิด ร้าย ๕ เปน ปัตตะนิ ทาย ว่า ผู้ นั้น จะ ได้ คู่ เปน คน ใจ บุญ ชอบ ทำ บุญ ให้ ทาน ใจ ศรัทธา ดี นัก แล"
+} else if (month == 7){
+    document.getElementById('m1').innerHTML= "๗<br>ตะนุ"
+    document.getElementById('m2').innerHTML= "๑<br>กะดุมภะ"
+    document.getElementById('m3').innerHTML= "๒<br>สหัชชะ"
+    document.getElementById('m4').innerHTML= "๓<br>พันธุ"
+    document.getElementById('m5').innerHTML= "๔<br>ปุตตะ"
+    document.getElementById('m6').innerHTML= "๕<br>หริ"
+    document.getElementById('m7').innerHTML= "๖<br>ปัตตนิ"
+    document.getElementById('mtext').innerHTML= "• หญิง ชาย ผู้ ใด เกิด ใน เดือน เจ็ด ๗ เปน ตะนุ ทาย ว่า ผู้ นั้น  สี เนื้อ ดำ รูปพรรณ สันทัด คน ๑ เปน กะดุมภะ ทาย ว่า ผู้ นั้น เปน คน ปาน กลาง เลี้ยง ตัว ได้ ดี แล ๒ เปน สหัชชะ ทาย ว่า ผู้ นั้น คบ คน สี เนื้อ ดำ จึง จะ ดี ๓ เปน พันธุ ๔ เปน ปุตตะ ทาย ว่า ผู้ นั้น มี บุตร ชาย เปน หัว ปี จึง จะ ดี ถ้า มี ลูก หญิง ก่อน มิ สู้ จะ ดี แล ๕ เปน หริ ทาย ว่า ผู้ นั้น มี สัตรู เปน คน ผม บาง ตา เหลือง ๖ เปน ปัตตะนิ ทาย ว่า ผู้ นั้น จะ ได้ คู่ เปน คน เจรจา ดี ใจ สัตย์ ซื่อ เปน ที่ ไว้ ใจ ได้ ดี แล"
+} if (month == 8){
+    document.getElementById('m1').innerHTML= "๑<br>ตะนุ"
+    document.getElementById('m2').innerHTML= "๒<br>กะดุมภะ"
+    document.getElementById('m3').innerHTML= "๓<br>สหัชชะ"
+    document.getElementById('m4').innerHTML= "๔<br>พันธุ"
+    document.getElementById('m5').innerHTML= "๕<br>ปุตตะ"
+    document.getElementById('m6').innerHTML= "๖<br>หริ"
+    document.getElementById('m7').innerHTML= "๗<br>ปัตตนิ"
+    document.getElementById('mtext').innerHTML= "• หญิง ชาย ผู้ ใด เกิด ใน เดือน แปด ๑ เปน คะ นุ ทาย ว่า ผู้ นั้น สี เนื้อ ดำ แดง รูปพรรณ เรียว บาง ๒ เปน กะดุมภะ ทาย ว่า ผู้ นั้น เปน คน ปาน กลาง ไม่ ยาก ไม่ จน นัก ๓ เปน สหัชชะ ทาย ว่า ผู้ นั้น ถ้า จะ คบ คน ให้ คบ คน สี เนื้อ กำ แดง ดี แล ๔ เปนพันธุ ๕ เปนปุตตะ ทาย ว่า ผู้ นั้น ถ้า มี บตร ชาย ก่อน ดี ถ้า มี บุตร หญิง ก่อน ไม่ ดี แล ๖ เปน หริ ทาย ว่า ผู้ นั้น มี คน ชาย ตา เหลือง ผม หยอง เปน สัตรู ถ้า ผู้ หญิง นม ยาน ข้าง หนึ่ง แล ๗ เปน ปัตตะนิ ทาย ว่า ผู้ นั้น จะ ได้ คู่ เปน คน ใจ ดุ ร้าย พูดจาก ไม่ เรีียบ ร้อย แล"
+}  else if (month == 9){
+    document.getElementById('m1').innerHTML= "๒<br>ตะนุ"
+    document.getElementById('m2').innerHTML= "๓<br>กะดุมภะ"
+    document.getElementById('m3').innerHTML= "๔<br>สหัชชะ"
+    document.getElementById('m4').innerHTML= "๕<br>พันธุ"
+    document.getElementById('m5').innerHTML= "๖<br>ปุตตะ"
+    document.getElementById('m6').innerHTML= "๗<br>หริ"
+    document.getElementById('m7').innerHTML= "๑<br>ปัตตนิ"
+    document.getElementById('mtext').innerHTML= "• หญิง ชาย ผู้ ใด เกิด ใน เดือน เก้า ๒ เปน ตะนุ ทาย ว่า ผู้ นั้น สี เนื้อ ขาว เหลือง จึง จะ ต้อง โฉลก ๓ เปน กะดุมภะ ทาย ว่า ผู้ นั้น เปน คน ปาน กลาง พอ จะ เลี้ยง ตัว ได้ ๔ เปน สหัชชะ ทาย ว่าผู้ นั้น คบ มิตร ผู้ ชาย ที่ รูปร่าง เรียว บาง สัก หน่อย จึง จะ ดี ๕ เปน พันธุ ๖ เปน ปุตตะ ทาย ว่า ผู้ นั้น มี บุตร ชาย ก่อน จึง จะ ดี ต้อง โฉลก แล ๗ เปน หริ ทาย ว่า ผู้ นั้น จะ มี คน สี เนื้อ ดำ แดง เปน สัตรู ถ้า เปน หญิง สี เนื้อ ขาว รูปร่าง สูง แล ๑ เปน ปัตตะนิ ทาย ว่า ผู้ นั้น จะ ได้ คู่ ดี เปน ที่ พึ่ง แล"
+} else if (month == 10){
+    document.getElementById('m1').innerHTML= "๓<br>ตะนุ"
+    document.getElementById('m2').innerHTML= "๔<br>กะดุมภะ"
+    document.getElementById('m3').innerHTML= "๕<br>สหัชชะ"
+    document.getElementById('m4').innerHTML= "๖<br>พันธุ"
+    document.getElementById('m5').innerHTML= "๗<br>ปุตตะ"
+    document.getElementById('m6').innerHTML= "๑<br>หริ"
+    document.getElementById('m7').innerHTML= "๒<br>ปัตตนิ"
+    document.getElementById('mtext').innerHTML= "• หญิง ชาย ผู้ ใด เกิด ใน เดือน สิบ ๓ เปน ตะนุ ทาย ว่า ผู้ นั้น สี เนื้อ ดำ แดง จึง จะ ต้อง โฉลก ๔ เปน กะดุมภะ ทาย ว่า ผู้ นั้น เปน คน ปาน กลาง ๕ เปน สหัชชะ ทาย ว่า ผู้ นั้น คบ คน เนื้อ สี ขาว จึง จะ ดี ๖ เปน พันธุ ๗ เปน ปุตตะ ทาย ว่า ผู้ นั้น มี บุตร น้ำ ใจ กล้า หาญ อาษา เจ้า นาย จึง จะ ดี แล ๑ เปน หริ ทาย ว่า ผู้ นั้น มี คน ปอง ร้าน เปน สัตรู มาก จะ ทำ สิ่ง ใด ต้อง ระวัง ตัว แล ๒ ปัตตะนิ ทาย ว่า ผู้ นั้น จะ ได้ คู่ เชื้อ ตระกูล ผู้ ดี แต่ มัก จะ ต่าง ใจ กัน ไม่ เกรง กัน แล"
+} else if (month == 11){
+    document.getElementById('m1').innerHTML= "๔<br>ตะนุ"
+    document.getElementById('m2').innerHTML= "๕<br>กะดุมภะ"
+    document.getElementById('m3').innerHTML= "๖<br>สหัชชะ"
+    document.getElementById('m4').innerHTML= "๗<br>พันธุ"
+    document.getElementById('m5').innerHTML= "๑<br>ปุตตะ"
+    document.getElementById('m6').innerHTML= "๒<br>หริ"
+    document.getElementById('m7').innerHTML= "๓<br>ปัตตนิ"
+    document.getElementById('mtext').innerHTML= "• หญิง ชาย ผู้ ใด เกิด ใน เดือน สิบ เอ็จ ๔ เปน ตะนุ ทาย ว่า ผู้ นั้น เปน คน เนื้อ สอง สี ๕ เปน กะดุมภะ ทาย ว่า ผู้ นั้น เปน คน ดี เลี้ยง ตัวได้ จะ มี บุญ วาศนา เพราะ ตน เอง ๖ เปน สหัชชะ ทาย ว่า ผู้ นั้น คบ คน เนื้อ ดำ แดง จึง จะ ดี ๗ เปน พันธุ ๑ เปน ปุตตะ มี บุตร ชาย หัว ปี จึง จะ ดี ถ้า มี บุตร หญิง หัว ปี ไม่ สู้ ดี ๒ เปน หริทาย ว่า ผู้ นั้น มี สัตรู เปน ผู้ หญิง คอย ปอง ร้าย ๓ เปน ปัตตะนิ ทาย ว่า ผู้ นั้น จะ ได้ คู่ เปน คน ปาก ร้าย สักหน่อย แต่ ว่า ความ คิด อ่าน ดี นัก แล"
+} else if (month == 12){
+    document.getElementById('m1').innerHTML= "๕<br>ตะนุ"
+    document.getElementById('m2').innerHTML= "๖<br>กะดุมภะ"
+    document.getElementById('m3').innerHTML= "๗<br>สหัชชะ"
+    document.getElementById('m4').innerHTML= "๑<br>พันธุ"
+    document.getElementById('m5').innerHTML= "๒<br>ปุตตะ"
+    document.getElementById('m6').innerHTML= "๓<br>หริ"
+    document.getElementById('m7').innerHTML= "๔<br>ปัตตนิ"
+    document.getElementById('mtext').innerHTML= "• หญิง ชาย ผู้ ใด เกิด ใน เดือน สิบ สอง ๕ เปน ตะนุ ทาย ว่า ผู้ นั้น สี เนื้อ ดำ แดง สักหน่อย จึง จะ ต้อง โฉลก ๖ เปน กะ ดุมภะ ทาย ว่า ผู้ นั้น เปน คน ดี จะ ได้ เปน ใหญ่ เพราะ มี ผู้ อุปถัมภ์ ๗ เปน สหัชชะ ทาย ว่า ผู้ นั้น คบ คน สี เนื้อ แดง รูป ร่าง เกร็ง จึง จะ ดี ๑ เปน พันธู ๒ เปน ปุตตะ ทาย ว่า ผู้ นั้น มี บุตร หญิง หัว ปี จึง จะ ดี ถ้า มี ลูก ชาย ก่อน มิ สู้ ดี ๓ เปน หริ ทาย ว่า ผู้ นั้น มี สัตรู เปน คน ผม หยอง ตา เหลือง ๔ เปน ปัตตะนิ ทาย ว่า ผู้ นั้น จะ ได้ คู่ เปน คน ปาก กล้า สักหน่อย แล"
+}
+
+if (year == "ชวด"){
+    document.getElementById('y1').innerHTML= "๑<br>มรณะ"
+    document.getElementById('y2').innerHTML= "๒<br>สุภะ"
+    document.getElementById('y3').innerHTML= "๓<br>กัมมะ"
+    document.getElementById('y4').innerHTML= "๔<br>ลาภะ"
+    document.getElementById('y5').innerHTML= "๕<br>พยายะ"
+    document.getElementById('y6').innerHTML= "๖<br>ทาษี"
+    document.getElementById('y7').innerHTML= "๗<br>ทาษา"
+    document.getElementById('ytext').innerHTML= "• หญิง ชาย ผู้ ใด เกิด ใน ปี ชวด ๑ เปน มรณะ ทาย ว่า ผู้ นั้น ใจ กล้า หาญ แต่ ว่า อาภัพ ๒ เปน สุภะ ทาย ว่า ผู้ นั้น พูดจา อ่อน หวาน จะ ไป ใน ทิศานุทิศ มี ผู้ เกรง ใจ ต้อน รับ แล ๓ เปน กัมมะ ทาย ว่า ผู้ นั้น มี บาป กำเนิด มา แต่ ชาติ์ ก่อน แต่ เปน คน ชอบ เล่า ความ ของ ท่าน ผู้ อื่น ๔ เปน ลาภะ ทาย ว่า ผู้ นั้น มัก ได้ ลาภ อันดี แล ๕ เปน พยายะ ทาย ว่า ผู้ นั้น เดิน เหิน ไป ไหน มัก มี เพื่อน ฝูง อุด หนุน แล ๗ เปน ทาษา ทาย ว่า ผู้ นั้น ทำ ราช การ ดี จะ ได้ เปน ใหญ่ กว่า เพื่อน ฝูง ทั้งปวง แล"
+} else if (year == "มะแม"){
+    document.getElementById('y1').innerHTML= "๑<br>มรณะ"
+    document.getElementById('y2').innerHTML= "๒<br>สุภะ"
+    document.getElementById('y3').innerHTML= "๓<br>กัมมะ"
+    document.getElementById('y4').innerHTML= "๔<br>ลาภะ"
+    document.getElementById('y5').innerHTML= "๕<br>พยายะ"
+    document.getElementById('y6').innerHTML= "๖<br>ทาษี"
+    document.getElementById('y7').innerHTML= "๗<br>ทาษา"
+    document.getElementById('ytext').innerHTML= "• หญิง ชาย ผู้ ใด เกิด ใน ปี มะแม ๑ เปน มรณะ ทาย ว่า ผู้ นั้น ใจ กล้า หาญ แต่ ว่า อาภัพ แล ๒ เปน สุภะ ทาย ว่า ผู้ นั้น พูด จา อ่อ่น หวาน จะ ไป ใน ทิศานุทิศใด มี แต่ ผู้ เกรง ใจ ต้อน รับ แล ๓ เปน กัมมะ ทาย ว่า ผู้ นั้น มี บาป กำเนิด มา แต่ ชาติ์ ก่อน มัก เปน คน ชอบ เล่า ความ ของ ท่าน ผู้ อื่น ๔ เปน ลาภะ ทาย ว่า ผู้ นั้น มัก ได้ ลาภ อัน ดี แล ๕ เปน พยายะ ทาย ว่า ผู้ นั้น ถ้า ทำ ราชการ จะ ได้ ดี เพราะ เพื่อน ฝูง อุดหนุน แล ๗ เปน ทาษา ทาย ว่า ผู้ นั้น ทำ ราชการ ดี จะ ได้ เปน ใหญ่ กว่า เพื่อน ผูง ทั้งปวง แล"
+} else if (year == "ฉลู"){
+    document.getElementById('y1').innerHTML= "๒<br>มรณะ"
+    document.getElementById('y2').innerHTML= "๓<br>สุภะ"
+    document.getElementById('y3').innerHTML= "๔<br>กัมมะ"
+    document.getElementById('y4').innerHTML= "๕<br>ลาภะ"
+    document.getElementById('y5').innerHTML= "๖<br>พยายะ"
+    document.getElementById('y6').innerHTML= "๗<br>ทาษี"
+    document.getElementById('y7').innerHTML= "๑<br>ทาษา"
+    document.getElementById('ytext').innerHTML= "• หญิง ชาย ผู้ ใด เกิด ใน ปี ฉลู ๒ เปน มรณะ ทาย ว่า ผู้ นั้น มัก จะ ต้อง จาก คู่ รัก ของ ตน ๓ เปน สุภะ ทาย ว่า ผู้ นั้น จะ ไป หา ท่าน ผู้ ใด ท่าน ต้อน รับ ยิน ดี นัก แล ๔ เปน กัมมะ ทาย ว่า ผู้ นั้น มัก ชอบ เจรจา เรื่อง ราว ต่าง ๆ ของ ผู้ อื่น ๕ เปน ลาภะ ทาย ว่า ผู้ นั้น จะ ได้ ลาภ เพราะ สมณะ ชี พรามณ์ ผู้ ใหญ่ ฤา ท่าน จะ ชี้ บอก ให้ แล ๖ เปน พยายะ ทาย ว่า ผู้ นั้น เปน คน เดืน เร็ว ถ้า จะ ไป ไหน มัก จะ พลัน ถึง ๗ เปน ทาษี ทาย ว่า ผู้ นั้น ทำ ราชการ ไม่ ดี ถึง จะ เปน ค่า เจ้า บ่าว ขุนนาง ก็ อาภัพ มัก ต้อง โทษ ติ เตียน เพราะ คน อื่น ให้ ร้าย แล ๑ เปน ทาษา ทาย ว่า ผู้ นั้น ถึง จะ ทำ ราชการ ก็ เปน แต่ ปาน กลาง แล"
+} else if (year == "วอก"){
+    document.getElementById('y1').innerHTML= "๒<br>มรณะ"
+    document.getElementById('y2').innerHTML= "๓<br>สุภะ"
+    document.getElementById('y3').innerHTML= "๔<br>กัมมะ"
+    document.getElementById('y4').innerHTML= "๕<br>ลาภะ"
+    document.getElementById('y5').innerHTML= "๖<br>พยายะ"
+    document.getElementById('y6').innerHTML= "๗<br>ทาษี"
+    document.getElementById('y7').innerHTML= "๑<br>ทาษา"
+    document.getElementById('ytext').innerHTML= "• หญิง ชาย ผู้ ใด เกิด ใน ปี วอก ๒ เปน มรณะ ทาย ว่า ผู้ นั้น มัก จะ ต้อง จาก คู่ รัก ของ ตน ๓ เปน สุภะ ทาย ว่า ผู้ นั้น จะไป หา ท่าน ผู้ ใด ท่า ต้อน รับ ยิน ดี นัก แล ๔ เปน กัมมะ ทาย ว่า ผู้ นั้น มัก ชอบ เจร เรื่อง ราว ต่าง ๆ ของ ผู้ อื่น ๕ เปน ลาภะ ทาย ว่า ผู้ นั้น จะ ได้ ลาภ เพราะ สมณะ ชีพราหมณ์ ผู้ ใหญ่ ฤา ท่าน จะ ชี้ บอก ให้ แล ๖ เปน พยายะ ทาย ว่า ผู้ นั้น เปน คน เดิน เร็ว ถ้า จะ ไป ไหน มัก พลัน ถึง ๗ เปน ทาษี ทาย ว่า ผู้ นั้น ทำ ราชการไม่ ดี ถุง จะ เปน ค่า เจ้า บ่าว ขุน นาง ก็ อาภัพ มัก จะ ต้อง โทษ ติ เตียน เพราะ คน ื่อน ให้ ร้าย แล ๑ เปน ทาษา ทาย ว่า ผู้ นั้น ถึง จะ ทำ ราชการ ก็ เปน แต่ ปาน กลาง แล"
+} else if (year == "ขาน" ){
+    document.getElementById('y1').innerHTML= "๓<br>มรณะ"
+    document.getElementById('y2').innerHTML= "๔<br>สุภะ"
+    document.getElementById('y3').innerHTML= "๕<br>กัมมะ"
+    document.getElementById('y4').innerHTML= "๖<br>ลาภะ"
+    document.getElementById('y5').innerHTML= "๗<br>พยายะ"
+    document.getElementById('y6').innerHTML= "๑<br>ทาษี"
+    document.getElementById('y7').innerHTML= "๒<br>ทาษา"
+    document.getElementById('ytext').innerHTML= "• หญิง ชาย ผู้ ใด เกิด ใน ปี ขาน ๓ เปน มรณะ ทาย ว่า ผู้ นั้น เมื่อ เพลา จะ สิ้น ชีพ มัก จะ ตาย ด้วย การ ไม่ ปรกติ ๔ เปน สุภะ ทาย ว่า ผู้ นั้น จะ ไป หา ท่าน ผู้ ใด มัก ไม่ เกรง ใจ อาภัพ แล ๕ เปน กัมมะ ทาย ว่า ผู้ นั้น บาป กรรม แต่ ชาติ์ ปาง ก่อน พอ ยัง ชั่ว แต่ ว่า อาภัพ เขา ว่า ดี ต่อ หน้า ลับ หลัง ว่า ร้าย แล ๖ เปน ลาภพ ทาย ว่า ผู้ นั้น จะ ได้ ลาภ แต่ ของ ขาว เหลือง ๗ เปน พยายะ ทาย ว่า ผู้ นั้น เดิน ไป แห่ง ใด มัก จะถูก บาด แผล เจ็บ ปวด ๑ เปน ทาษี ทาย ว่า ผู้ นั้น จะ อาษ เจ้า นาย ดี นัก ๒ เปน ทาษา ทาย ว่า ผู้ นั้น ทำ ราชการ ดี เพราะ คบ คน สี เนื้อ ขาว จะ อุด หนุน ให้ ได้ ดี แล"
+} else if (year == "ระกา"){
+    document.getElementById('y1').innerHTML= "๓<br>มรณะ"
+    document.getElementById('y2').innerHTML= "๔<br>สุภะ"
+    document.getElementById('y3').innerHTML= "๕<br>กัมมะ"
+    document.getElementById('y4').innerHTML= "๖<br>ลาภะ"
+    document.getElementById('y5').innerHTML= "๗<br>พยายะ"
+    document.getElementById('y6').innerHTML= "๑<br>ทาษี"
+    document.getElementById('y7').innerHTML= "๒<br>ทาษา"
+    document.getElementById('ytext').innerHTML= "• หญิง ชาย ผู้ ใด เกิด ใน ปี ระกา ๓ เปน มรณะ ทาย ว่า ผู้ นั้น เมื่อ เพลง จะ สิ้น ชีพ มัก จะ ตาย ด้วย การ ไม่ ปรกติ ๔ เปน สุภะ ทาย ว่า ผู้ นั้น จะ ไป หา ท่าน ผู้ ใด ท่าน มัก ไม่ เกรง ใจ อาภัพ แล ๕ เปน กัมมะ ทาย ว่า ผู้ นั้น บาป กรรม แต่ ชาติปาง ก่อน พอ ยัง ชั่ว แต่ ว่า อาภัพ เขา ว่า ดี ต่อ หน้า ลีบ หลัง ว่า ร้าย แล ๖ เปน ลาภะ ทาย ว่า ผู้ นั้น จะ ได้ ลาภ แต่ ของ ขาว เหลือง ๗ เปน พยายะ ทาย ว่า ผู้ นั้น เดิน ไป แห่ง ใด มัก ถูก บาด แผล เจ็บ ปวด ๑ เปน ทาษี ทาย ว่า ผู้ นั้น จะ อาษา เจ้า นาย ดี นัก ๒ เปน ทาษา ทาย ว่า ผู้ นั้น ทำ ราชการ ดี เพราะ คบ คน สี เนื้อ ขาว จะ อุดหนุน ให้ ได้ ดี แล"
+} else if (year == "เถาะ"){
+    document.getElementById('y1').innerHTML= "๔<br>มรณะ"
+    document.getElementById('y2').innerHTML= "๕<br>สุภะ"
+    document.getElementById('y3').innerHTML= "๖<br>กัมมะ"
+    document.getElementById('y4').innerHTML= "๗<br>ลาภะ"
+    document.getElementById('y5').innerHTML= "๑<br>พยายะ"
+    document.getElementById('y6').innerHTML= "๒<br>ทาษี"
+    document.getElementById('y7').innerHTML= "๓<br>ทาษา"
+    document.getElementById('ytext').innerHTML= "• หญิง ชาย ผู้ ใด เกิด ใน ปี เถาะ ๔ เปน มรณะ ทาย ว่า ผู้ นั้น เมื่อ เพลา จะ ถึง แก่ กรรม จะ ตาย ก็ เพราะ กิน ของ ผิด สำ แลง แล ๕ เปน สุภะ ทาย ว่า ผู้ นั้น จะ ไป หา ท่าน ที่ ใด ท่าน มัก จะ ต้อน รับ เชื้อ เชิญ เรียก หา แต่ ไกล แล ๖ เปน กัมมะ ทาย ว่า ผู้ นั้น มี นิไสย์ เนื่อง มา แต่ ชาติ์ ปาง ก่อน เปน ผู้ รู้ หลัก นักปราช แก่ คน ทั้ง ปวง แล ๗ เปนลาภะ ทาย ว่า ผู้ นั้น จะ ได้ ทรัพย์ สิน เงิน ทอง ก็ ต้อง เดือด เนื้อ ร้อน ใจ ๑ เปน พยายะ ทาย ว่า ผู้ นั้น เดิน เหิน คล่อง แคล่ว ไป ไหน ต้อง มี เพื่อน ติด ตาม จึง จะ ดี ๒ เปน ทาษี ทาย ว่า ผู้ นั้น จะ อาษา เจ้า นาย จะ ได้ ดี เพราะ ผู้ หญิง อุด หนุน ๓ เปน ทาษา ทาย ว่า ผู้ นั้น ทำ ราชการ ไม่ดี อาภัพ แล"
+} else if (year == "จอ"){
+    document.getElementById('y1').innerHTML= "๔<br>มรณะ"
+    document.getElementById('y2').innerHTML= "๕<br>สุภะ"
+    document.getElementById('y3').innerHTML= "๖<br>กัมมะ"
+    document.getElementById('y4').innerHTML= "๗<br>ลาภะ"
+    document.getElementById('y5').innerHTML= "๑<br>พยายะ"
+    document.getElementById('y6').innerHTML= "๒<br>ทาษี"
+    document.getElementById('y7').innerHTML= "๓<br>ทาษา"
+    document.getElementById('ytext').innerHTML= "• หญิง ชาย ผู้ ใด เกิด ใน ปี จอ ๔ เปน มรณะ ตาย ว่า ผู้ นั้น เมื่อ เพลา จะ ถึง แก่ กรรม จะ ตาย เพราะ กิน ของ ผิด สำแดง แล ๕ เปน สุภะ ทาย ว่า ผู้ นั้น จะ ไปหา ท่าน ที่ แห่ง ใด มัก จะ ต้อน รับ เชื้อ เชิญ เรียก แต่ ไกล แล ๖ เปน กัมมะ ทาย ว่า ผู้ นั้น มี นิ ไสย เนื่อง มา แต่ ชาติปาง ก่อน เปน ผู้ รู้ หลัก นักปราช แก่ คน ทั้งปวง แล ๗ เปน ลาภะ ทาย ว่า ผู้ นั้น จะได้ ทรัพย์ สิน เงิน ทอง ก็ ต้อง เดือน เนื้อ ร้อน ใจ แล ๑ เปน พยายะ ทาย ว่า ผู้ นั้น เดิน เหิน คล่องแคล่วไป ไหน ต้อง มี เพื่อน ติด ตาม จึง จะ ดี ๒ เปน ทาษี ทาย ว่า ผู้ นั้น จะ อาษา เจ้า นาย จะ ได้ ดี เพราะ ผู้ หญิง อุด หนุน ๓ เปน ทา ษา ทาย ว่า ผู้ นั้น ทำ ราชการ ไม่ ดี อาภัพ แล"
+} else if (year == "มะโรง"){
+    document.getElementById('y1').innerHTML= "๕<br>มรณะ"
+    document.getElementById('y2').innerHTML= "๖<br>สุภะ"
+    document.getElementById('y3').innerHTML= "๗<br>กัมมะ"
+    document.getElementById('y4').innerHTML= "๑<br>ลาภะ"
+    document.getElementById('y5').innerHTML= "๒<br>พยายะ"
+    document.getElementById('y6').innerHTML= "๓<br>ทาษี"
+    document.getElementById('y7').innerHTML= "๔<br>ทาษา"
+    document.getElementById('ytext').innerHTML= "• หญิง ชาย ผู้ ใด เกิด ใน ปี มะโรง ๕ เปน มาณะ ทาย ว่า ผู้ นั้น จะ ตาย ก็ เพราะ อาษา ท่าน ๖ เปน สุภะ ทาย ว่า ผู้ นั้น จะ ไป หา ท่าน ผู้ ใด มัก จะ รัก ใคร่ เหมือน พี่ น้อง กัน แล ๗ เปน กัมมะ ทาย ว่า ท่าน นั้น มี เวร กรรม แต่ ชาติ์ ปาง ก่อน จะ ต้อง ถูก บาด เจ็บ เพราะ ท่าน ผู้ อื่น แล ๑ เปน ลาภะ ทาย ว่า ผู้ นั้น จะ ได้ ลาภ เพราะ ผู้ หญิง แล ๒ เปน พยายะ ทาย ว่า ผู้ นั้น เดิน เหิน ช้า จะ ไป ไหน ก็ ค่อย ไป ค่อย มา ๓ เปน ทาษี ทาย ว่า ผู้ นั้น จะ อาษา เจ้า นาย ก็ ทำ แต่ พอ ตัว จึง จะ ดี ๔ เปน ทาษา ทาย ว่า ผู้ นั้น ทำ ราชการ จะ มี ชื่อ เสียง ปรากฎ แล"
+} else if (year == "กุน"){
+    document.getElementById('y1').innerHTML= "๕<br>มรณะ"
+    document.getElementById('y2').innerHTML= "๖<br>สุภะ"
+    document.getElementById('y3').innerHTML= "๗<br>กัมมะ"
+    document.getElementById('y4').innerHTML= "๑<br>ลาภะ"
+    document.getElementById('y5').innerHTML= "๒<br>พยายะ"
+    document.getElementById('y6').innerHTML= "๓<br>ทาษี"
+    document.getElementById('y7').innerHTML= "๔<br>ทาษา"
+    document.getElementById('ytext').innerHTML= "• หญิง ชาย ผู้ ใด เกิด ใน ปี กุน ๕ เปน มรณะ ทาย ว่า ผู้ นั้น จะ ตาย ก็ เพราะ อาษา ท่าน ๖ เปน สุภะ ทาย ว่า ผู้ นั้น จะ ไป หา ผ่าน ผู้ ใด มัก จะ รัก ใคร่ เหมือน พี่ น้อง กัน แล ๗ เปน กัมมะ ทาย ว่า ผู้ นั้น มี เวร กรรม แต่ ชาติ ปาง ก่อน จะต้อง ูก บาด เจ็บ เพราะ ท่าน ผู้ อื่น แล ๑ เปน ลาภะ ทาย ว่า ผู้ นั้น จะ ได้ ลาภ เพราะ ผู้หญิง แล ๒ เปน พยายะ ทาย ว่า ผู้ นั้น เดิน เหิน ช้า จะ ไป ไหน ก็ ค่อย ไป ค่อย มา ๓ เปน ทาษี ทาย ว่า ผู้ นั้น จะ อาษา เจ้า นาย ก็ ทำ แต่ พอ ตัว จึง จะ ดี ๔ เปน ทาษา ทาย ว่า ผู้ นั้น ทำราชการ จะ มี ชื่อ เสียง ปรากฎ แล"
+} else if (year == "มะเสง"){
+    document.getElementById('y1').innerHTML= "๖<br>มรณะ"
+    document.getElementById('y2').innerHTML= "๗<br>สุภะ"
+    document.getElementById('y3').innerHTML= "๑<br>กัมมะ"
+    document.getElementById('y4').innerHTML= "๒<br>ลาภะ"
+    document.getElementById('y5').innerHTML= "๓<br>พยายะ"
+    document.getElementById('y6').innerHTML= "๔<br>ทาษี"
+    document.getElementById('y7').innerHTML= "๕<br>ทาษา"
+    document.getElementById('ytext').innerHTML= "• หญิง ชาย ผู้ ใด เกิด ใน ปี มะเสง ๖ เปน มรณะ ทาย ว่า ผู้ นั้น จะ ต้อง ตาย เพราะ อาษา ท่าน ผู้ ใหญ่ ถ้า มิ ฉนั้น ก็ เพราะ ความ เหน็ด เหนื่อย เหลือ สาหัศ แล ๗ เปน สุภะ ทาย ว่า ผู้ นั้น ไป หา ท่าน ผู้ ใด ท่าน ไม่ เรียก หา เลย อาภัพ แล ๑ เปน กัมมะ ทาย ว่า ผู้ นั้น ทำ คุณ แก่ ใคร ไม่ ขึ้น เลย ๒ เปน ลาภะ ทาย ว่า ผู้ นั้น จะ ได้ ลาภ เพราะ ผู้ หญิง เด็ก ๓ เปน พยายะ ทาย ว่า ผู้ นั้น เดิน ทางไป สาระทิศใด มัก พูดจา โวหาร แล ๔ เปน ทาษี ทาย ว่า ผู้ นั้น จะ อาษา เจ้า นาย ก็ เปน ปาน กลาง จะ ได้ ดี พอ ประมาณ แล ๕ เปน ทาษา ทาย ว่า ผู้ นั้น ทำ ราชการ อาภัพ แล"
+} else if (year == "มะเมีย"){
+    document.getElementById('y1').innerHTML= "๗<br>มรณะ"
+    document.getElementById('y2').innerHTML= "๑<br>สุภะ"
+    document.getElementById('y3').innerHTML= "๒<br>กัมมะ"
+    document.getElementById('y4').innerHTML= "๓<br>ลาภะ"
+    document.getElementById('y5').innerHTML= "๔<br>พยายะ"
+    document.getElementById('y6').innerHTML= "๕<br>ทาษี"
+    document.getElementById('y7').innerHTML= "๖<br>ทาษา"
+    document.getElementById('ytext').innerHTML= "• หญิง ชาย ผู้ ใด เกิด ใน ปี มะ เมีย ๗ เปน มรณะ ทาย ว่า ผู้ นั้น เมื่อ เพลา จะ ถึง แก่ กรรม จะ ตาย ด้วย เรื่อง ทรัพย์ สิน เงิน ทอง แล ๑ เปน สุภะ ทาย ว่า ผู้ นั้น จะ ไป หา ท่าน ผู้ ใด มี ผู้ นับถือ ประหนึ่ง พี่ น้อง ถ้า มี เงิน ทอง มัก วาง ใจ ผู้ อื่น แล ๒ เปน กัมมะ ทาย ว่า ผู้ นั้น มี บาป ติด มา แต่ ชาติ์ ปาง ก่อน แล ๓ เปน ลาภะ ทาย ว่า ผู้ นั้น จะ ได้ ลาภ เข้า ของ สิ่ง ใด มัก มี ตำหนิ แล ๔ เปน พยายะ ทาย ว่า ผู้ นั้น เดิน ทาง มัก จะ ตก อยู่ หลัง เขา แล ๕ เปน ทาษี ทาย ว่า ผู้ นั้น จะ อาษา เจ้า นาย จะ ได้ ดี เพราะ บัณฑิตย์ อุด หนุน แล ๖ เปน ทาษา ทาย ว่า ผู้ นั้น ทำ ราชการ จะ ได้ เปน ใหญ่ แก่ คน ทั้ง ปวง แล"
+}
+
+
+}
+document.querySelector('.cal').addEventListener("click", ()=>cal());
+    </script>
+</body>
+</html>
